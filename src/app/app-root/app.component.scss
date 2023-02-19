@@ -1,0 +1,25 @@
+.main-app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    main {
+        overflow: scroll;
+        flex-grow: 1;
+        height: calc(100vh - 50px - 25px);
+    }
+
+    footer {
+        height: 25px;
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        align-items: center;
+        justify-content: center;
+        color: brown;
+        background-color: peachpuff;
+        font-size: 0.8em;
+        width: 100%;
+    }
+}

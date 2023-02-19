@@ -1,0 +1,20 @@
+.app-header{
+    height: 50px;
+    background-color: lightsalmon;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid orange;
+    color: rgb(124, 16, 16);
+    width: 100%;
+    padding-inline: 20px;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+li{ 
+    margin-left: 10px;
+}

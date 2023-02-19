@@ -1,0 +1,11 @@
+<article *ngIf="
+      chartData.marketPriceHistory.datasets[0].data.length &&
+      chartData.marketPriceHistory.labels.length
+    ">
+    <graph [chartData]="chartData.marketPriceHistory" [options]="{responsive: true}" />
+</article>
+<article *ngIf="
+      chartData.avgBlockSize.datasets[0].data.length &&
+      chartData.avgBlockSize.labels.length">
+    <graph [chartData]="chartData.avgBlockSize" [options]="{responsive: true}" />
+</article>

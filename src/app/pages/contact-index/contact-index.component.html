@@ -1,0 +1,9 @@
+<section class="main-app">
+    <!-- <p>{{prm|async}}</p> -->
+    <contact-details *ngIf="selectedContactId; else contactList" [contactId]="selectedContactId"></contact-details>
+
+    <ng-template #contactList>
+        <contact-filter></contact-filter>
+        <contact-list (selectContact)="onSelectContactId($event)" [contacts]="contacts$|async"></contact-list>
+    </ng-template>
+</section>
