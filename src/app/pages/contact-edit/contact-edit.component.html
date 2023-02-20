@@ -1,1 +1,22 @@
-<p>contact-edit works!</p>
+<section *ngIf="contact" class="contact-edit">
+    <h2>{{contact._id ? 'Edit' : 'Add'}} contact</h2>
+    <form (ngSubmit)="onAddContact()">
+        <label for="name">Name</label>
+        <input [(ngModel)]="contact.name" type="text" name="name" id="name">
+
+        <label for="age">Email</label>
+        <input [(ngModel)]="contact.email" type="email" name="email" id="email">
+        
+        <label for="age">Phone</label>
+        <input [(ngModel)]="contact.phone" type="string" name="phone" id="phone">
+
+        <!-- <label for="birthDate">Birth Date</label>
+        <input [ngModel]="contact.birthDate | date:'yyyy-MM-dd'" (ngModelChange)="handleDateField($event)" type="date"
+            name="birthDate" id="birthDate"> -->
+
+        <button>Save</button>
+    </form>
+    <button (click)="onBack()">Back</button>
+    <button *ngIf="contact" (click)="onRemoveContact()" class="remove-btn">Delete</button>
+
+</section>

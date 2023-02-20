@@ -1,4 +1,5 @@
-<section (click)="onSelectContactId()" class="contact-preview">
+<section [routerLink]="['/contact', contact._id]" class="contact-preview">
+<!-- <section (click)="onSelectContactId()" class="contact-preview"> -->
     <img src="https://robohash.org/{{contact._id}}?set=set5" alt="">
     <section class="info">
         <section class="data">
@@ -7,7 +8,8 @@
             <p>Phone: {{contact.phone}}</p>
         </section>
         <section class="actions">
-            <button class="remove-btn">X</button>
+            <button (click)="onRemoveContact($event)" class="remove-btn">X</button>
+            <button (click)="onEditContact($event)" class="edit-btn">Edit</button>
         </section>
     </section>
 </section>

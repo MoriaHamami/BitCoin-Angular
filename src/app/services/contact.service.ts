@@ -172,11 +172,20 @@ export class ContactService {
         this.loadContacts(contactFilter)
     }
 
+    public getEmptyContact() {
+        return {
+            name: '',
+            email: '',
+            phone: ''
+        }
+    }
+
     private _updateContact(contact: Contact) {
         //mock the server work
         this._contactsDb = this._contactsDb.map(c => contact._id === c._id ? contact : c)
         // change the observable data in the service - let all the subscribers know
         this._contacts$.next(this._sort(this._contactsDb))
+        return of(contact)
     }
 
     private _addContact(contact: Contact) {
@@ -185,6 +194,7 @@ export class ContactService {
         if (typeof newContact.setId === 'function') newContact.setId(getRandomId());
         this._contactsDb.push(newContact)
         this._contacts$.next(this._sort(this._contactsDb))
+        return of(newContact)
     }
 
     private _sort(contacts: Contact[]): Contact[] {

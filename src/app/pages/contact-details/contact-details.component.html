@@ -1,6 +1,8 @@
-<section *ngIf="contact" class="contact-details">
+<section class="contact-details">
     <p>Name: {{contact.name}}</p>
     <p>Email: {{contact.email}}</p>
     <p>Phone: {{contact.phone}}</p>
     <img src="https://robohash.org/{{contact._id}}?set=set5" alt="">
+    <button (click)="onEditContact($event)" class="edit-btn">Edit</button>
+    <button (click)="onBack()">Back</button>
 </section>

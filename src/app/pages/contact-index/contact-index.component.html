@@ -1,9 +1,12 @@
 <section class="main-app">
     <!-- <p>{{prm|async}}</p> -->
-    <contact-details *ngIf="selectedContactId; else contactList" [contactId]="selectedContactId"></contact-details>
-
-    <ng-template #contactList>
+    <!-- <contact-details *ngIf="selectedContactId; else contactList" [contactId]="selectedContactId"></contact-details> -->
+    <a routerLink="/contact/edit">Add Contact</a>
+    <!-- <ng-template #contactList> -->
         <contact-filter></contact-filter>
-        <contact-list (selectContact)="onSelectContactId($event)" [contacts]="contacts$|async"></contact-list>
-    </ng-template>
+        <!-- <contact-list (selectContact)="onSelectContactId($event)" [contacts]="contacts$|async"></contact-list> -->
+        <contact-list (remove)="onRemoveContact($event)" [contacts]="contacts$|async"></contact-list>
+    <!-- </ng-template> -->
 </section>
+
+<router-outlet></router-outlet>

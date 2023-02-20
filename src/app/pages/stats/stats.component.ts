@@ -21,11 +21,11 @@ export class StatsComponent {
       datasets: [
         {
           label: "Average USD market price",
-          backgroundColor: "#f7931a99",
           data: [],
           fill: true,
           tension: 0.5,
-          borderColor: 'black',
+          backgroundColor: "#f7931a60",
+          borderColor: '#f7931a90',
         },
       ],
     },
@@ -34,11 +34,11 @@ export class StatsComponent {
       datasets: [
         {
           label: "Average block size (MB)",
-          backgroundColor: "#f7931a99",
           data: [],
           fill: true,
           tension: 0.5,
-          borderColor: 'black',
+          backgroundColor: "#f7931a60",
+          borderColor: '#f7931a90',
         },
       ],
     },
@@ -47,6 +47,14 @@ export class StatsComponent {
   ngOnInit() {
     this.getMarketPriceHistory();
     this.getAvgBlockSize();
+
+    window.addEventListener('resize', () => {
+      this.marketPriceHistory = null
+      setTimeout(() => {
+        this.getMarketPriceHistory()
+        this.getAvgBlockSize()
+      }, 50)
+    })
   }
 
   async getMarketPriceHistory() {

@@ -22,7 +22,7 @@ export class ContactIndexComponent implements OnInit, OnDestroy {
 
         this.contactService.loadContacts(this.filterBy)
         this.contacts$ = this.contactService.contacts$
-
+        // console.log('this.contacts$:', this.contacts$)
         // this.subscription = this.contactService.contacts$.subscribe(contacts => {
         //     this.contacts = contacts
         // })
@@ -30,9 +30,13 @@ export class ContactIndexComponent implements OnInit, OnDestroy {
 
     }
 
-    onSelectContactId(contactId: string) {
-        console.log('contactId:', contactId)
-        this.selectedContactId = contactId
+    // onSelectContactId(contactId: string) {
+    //     console.log('contactId:', contactId)
+    //     this.selectedContactId = contactId
+    // }
+
+    onRemoveContact(contactId: string) {
+        this.contactService.deleteContact(contactId)
     }
 
     ngOnDestroy(): void {
