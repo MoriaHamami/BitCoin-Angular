@@ -1,5 +1,6 @@
 <h1>Explore the world of Bitcoin!</h1>
 <h2 class="rate">Current Bitcoin rate: 1 USD = {{ rate }} BTC</h2>
+<moves-list *ngIf="user.moves" title="Transactions" [transactions]="user.moves"/>
 <!-- <img src="../../icons/bg.jpg" alt="" /> -->
 <p>
     Bitcoin is a decentralized digital currency that operates on a peer-to-peer network without the need for a central

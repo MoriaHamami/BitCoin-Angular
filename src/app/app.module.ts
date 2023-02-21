@@ -16,6 +16,9 @@ import { StatsComponent } from './pages/stats/stats.component';
 import { AppHeaderComponent } from './cmps/app-header/app-header.component';
 import { NgChartsModule } from 'ng2-charts';
 import { GraphComponent } from './cmps/graph/graph.component';
+import { SignupPageComponent } from './pages/signup-page/signup-page.component';
+import { TransferFundComponent } from './cmps/transfer-fund/transfer-fund.component';
+import { MovesListComponent } from './cmps/moves-list/moves-list.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { GraphComponent } from './cmps/graph/graph.component';
     ContactEditComponent,
     StatsComponent,
     AppHeaderComponent,
-    GraphComponent
+    GraphComponent,
+    SignupPageComponent,
+    TransferFundComponent,
+    MovesListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,9 @@
+<h3 *ngIf="!transactions?.length">No transactions</h3>
+<section *ngIf="transactions?.length">
+    <h3>{{title}}</h3>
+    <article *ngFor="let transaction of transactions">
+        <h2>From: {{ transaction.from }}</h2>
+        <h3>To: {{ transaction.to }}</h3>
+        <h3>Fund: {{ transaction.amount + " BTC" }}</h3>
+    </article>
+</section>

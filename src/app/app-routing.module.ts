@@ -7,40 +7,35 @@ import { StatsComponent } from './pages/stats/stats.component';
 import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
 import { ContactResolver } from './services/contact.resolver';
 import { ContactEditComponent } from './pages/contact-edit/contact-edit.component';
+import { SignupPageComponent } from './pages/signup-page/signup-page.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomePageComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: 'home', component: HomePageComponent, canActivate: [AuthGuard] },
+  { path: 'signup', component: SignupPageComponent },
   {
     path: 'contact/:id',
     component: ContactDetailsComponent,
-    resolve: { contact: ContactResolver }
+    resolve: { contact: ContactResolver }, 
+    canActivate: [AuthGuard]
   },
-  // {
-  //   path: 'contact/edit/:id', 
-  //   component: ContactEditComponent,
-  //   resolve: { contact: ContactResolver }
-  // },
   {
-    path: 'contact', component: ContactIndexComponent, children: [
-      // {
-      //   path: ':id',
-      //   component: ContactDetailsComponent,
-      //   resolve: { contact: ContactResolver }
-      // },
+    path: 'contact', component: ContactIndexComponent, canActivate: [AuthGuard], children: [
       {
-        path: 'edit/:id', 
+        path: 'edit/:id',
         component: ContactEditComponent,
-        resolve: { contact: ContactResolver }
+        resolve: { contact: ContactResolver },
+        canActivate: [AuthGuard]
       },
       {
-        path: 'edit', 
+        path: 'edit',
         component: ContactEditComponent,
+        canActivate: [AuthGuard]
       },
     ]
   },
-  // { path: 'contact', component: ContactIndexComponent },
-  { path: 'stats', component: StatsComponent },
+  { path: 'stats', component: StatsComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({

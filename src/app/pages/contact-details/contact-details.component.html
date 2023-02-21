@@ -3,6 +3,8 @@
     <p>Email: {{contact.email}}</p>
     <p>Phone: {{contact.phone}}</p>
     <img src="https://robohash.org/{{contact._id}}?set=set5" alt="">
+    <transfer-fund [contact]="contact" />
+    <moves-list *ngIf="contact.transactions" title="Transactions" [transactions]="contact.transactions"/>
     <button (click)="onEditContact($event)" class="edit-btn">Edit</button>
     <button (click)="onBack()">Back</button>
 </section>

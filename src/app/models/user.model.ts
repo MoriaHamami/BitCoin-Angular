@@ -1,10 +1,12 @@
+import {Transaction} from "./transaction.model"
+
 export class User {
 
   public _id?: string = ''
   constructor(
       public name: string = '',
       public coins: number = 100,
-      public moves: string[]
+      public moves: Array<Transaction> = []
       ) {
   }
 
