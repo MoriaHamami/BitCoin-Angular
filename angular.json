@@ -65,10 +65,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "browserTarget": "inClass-pets:build:production"
+                            "browserTarget": "bitcoin:build:production"
                         },
                         "development": {
-                            "browserTarget": "inClass-pets:build:development"
+                            "browserTarget": "bitcoin:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "inClass-pets:build"
+                        "browserTarget": "bitcoin:build"
                     }
                 },
                 "test": {
@@ -97,6 +97,9 @@
                         ],
                         "scripts": []
                     }
+                },
+                "deploy": {
+                  "builder": "angular-cli-ghpages:deploy"
                 }
             }
         }

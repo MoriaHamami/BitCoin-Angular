@@ -1,9 +1,16 @@
 :host{
     font-size: 0.8em;
-    h1{
+    h2{
         padding-block: 10px;
     }
-}
-img {
-    // height: 100vh;
+    h3{
+        border-bottom: 1px solid lightgray;
+        padding-bottom: 10px;
+    }
+    h4{
+        padding-top: 10px;
+    }
+    img {
+        height: 15px;
+    }
 }

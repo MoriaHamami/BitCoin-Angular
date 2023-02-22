@@ -1,20 +1,35 @@
-.app-header{
+.app-header {
     height: 50px;
-    background-color: lightsalmon;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid orange;
-    color: rgb(124, 16, 16);
+    border-bottom: 1px solid lightgray;
     width: 100%;
     padding-inline: 20px;
+
+    .logo {
+        width: 30px;
+        aspect-ratio: 1/1;
+    }
 }
 
-ul {
+nav {
     display: flex;
     list-style-type: none;
+
+    img {
+        width: 23px;
+        aspect-ratio: 1/1;
+    }
+
 }
 
-li{ 
-    margin-left: 10px;
+a:not(.logo) {
+    margin-left: 20px;
+    
+    &.active img {
+        box-shadow: 1px 1px 6px 0px #00000096;
+        background-color: #ffa50057;
+        border-radius: 5px;
+    }
 }

@@ -1,8 +1,8 @@
 <section class="login-page">
-    <div class="user-data">
-        <form (ngSubmit)="onSignIn()">
-            <input type="text" [(ngModel)]="userName" name="userName" placeholder="Enter username..." />
-            <button>Enter</button>
-        </form>
-    </div>
+    <img src="./assets/icons/bitcoin.png" alt="" />
+    <form (ngSubmit)="onSignIn()">
+        <label>Please enter your name:</label>
+        <input type="text" [(ngModel)]="userName" name="userName"/>
+        <button>Sign up</button>
+    </form>
 </section>

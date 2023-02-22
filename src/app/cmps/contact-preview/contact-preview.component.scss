@@ -1,68 +1,68 @@
 .contact-preview {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    width: 200px;
-    height: 210px;
+    padding-block: 3px;
+    padding-inline: 5px;
     align-items: center;
-    box-shadow: -1px 1px 8px #00000045;
-    border-radius: 3px;
-    display: flex;
+    border-radius: 20em;
+    font-size: 0.8em;
+    background-color: whitesmoke;
     cursor: pointer;
 
-    img {
-        width: 100px;
-        object-fit: cover;
+    >*:not(:first-child){
+        padding-left: 10px;
     }
 
-
-    .info {
-        font-size: 0.8em;
-        flex-grow: 1;
-        position: relative;
+    .user-img {
+        height: 2.5em;
+        border-radius: 50%;
+        object-fit: cover;
+        background-color: lightgray;
+        
+    }
+    
+    p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100px;
+        margin: 0;
+    }
+    
+    .actions {
         display: flex;
-        flex-direction: column;
-        padding: 10px;
+        justify-content: end;
+        opacity: 0;
+        transform: translateX(-10%);
+        transition-duration: 0.3s;
+        transition-property: transform, opacity;
 
-        >p {
-            margin: 0;
-        }
-
-        .data {
-            flex-grow: 1;
-        }
-
-        .actions {
+        .remove-btn,
+        .edit-btn {
             display: flex;
-            gap: 10px;
-            opacity: 0;
-            transform: translateX(-10%);
-            transition-duration: 0.3s;
-            transition-property: transform, opacity;
+            background: none;
+            border: none;
+            padding: 0;
+            transition: 0.15s;
+            cursor: pointer;
 
-            .remove-btn {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 16px;
-                height: 16px;
-                font-size: 0.9em;
-                line-height: 1;
-                background-color: inherit;
-                border-radius: 100%;
-                border: 1px solid black;
-                transition: 0.15s;
-                cursor: pointer;
+            .edit-icon {
+                width: 15px;
+                aspect-ratio: 1/1;
+            }
 
-                &:hover {
-                    background-color: orangered;
-                    color: white;
-                }
+            .delete-icon {
+                width: 17px;
+                aspect-ratio: 1/1;
+            }
+
+            &:hover {
+                opacity: 0.8;
             }
         }
     }
 
-    &:hover .info .actions {
+    &:hover .actions {
         opacity: 1;
         transform: translateX(0);
     }

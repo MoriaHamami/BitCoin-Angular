@@ -1,9 +1,21 @@
 <section class="app-header">
-    <h1>Mr.BitCoin</h1>
-    <ul>
-        <li><a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a></li>
-        <li><a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contacts</a></li>
-        <li><a routerLink="/stats" routerLinkActive="active" ariaCurrentWhenActive="page">Statistics</a></li>
-        <li><a routerLink="/signup" routerLinkActive="active" ariaCurrentWhenActive="page">Signup</a></li>
-    </ul>
+    <a class="logo" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page"
+        [routerLinkActiveOptions]="{exact:true}">
+        <img src="./assets/icons/logo.png" alt="" />
+    </a>
+    <nav>
+        <a title="Home Page" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page"
+            [routerLinkActiveOptions]="{exact:true}">
+            <img src="./assets/icons/home.png" alt="" />
+        </a>
+        <a title="Contacts" routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <img src="./assets/icons/users.png" alt="" />
+        </a>
+        <a title="Statistics" routerLink="/stats" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <img src="./assets/icons/increase.png" alt="" />
+        </a>
+        <a title="Signup" routerLink="/signup" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <img src="./assets/icons/contact.png" alt="" />
+        </a>
+    </nav>
 </section>

@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    title = 'inClass-contacts';
+    title = 'contacts';
 
-    selectedCmp = 'home';
+    selectedCmp = 'signup';
 
     selectCmp(cmpName: string) {
         this.selectedCmp = cmpName;

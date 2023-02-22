@@ -1,0 +1,23 @@
+.moves {
+    max-height: calc( 100vh - 50px - 160px - 20px);
+    overflow-y: scroll;
+    margin-top: 10px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    .title {
+        font-weight: bold;
+    }
+
+    >* {
+        padding-block: 10px;
+        margin-inline: 10px;
+        &:not(:last-child){
+            border-bottom: 1px solid lightgray;
+        }
+    }
+
+    .to {
+        padding-bottom: 10px;
+    }
+
+}

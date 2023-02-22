@@ -6,7 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app-header.component.scss']
 })
 export class AppHeaderComponent {
-  onSetPage(page: string){
-    
-  }
+
 }

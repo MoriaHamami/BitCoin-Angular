@@ -6,7 +6,7 @@ import { ContactService } from 'src/app/services/contact.service';
 @Component({
     selector: 'contact-index',
     templateUrl: './contact-index.component.html',
-    // styleUrls: ['./contact-index.component.scss']
+    styleUrls: ['./contact-index.component.scss']
 })
 export class ContactIndexComponent implements OnInit, OnDestroy {
 
