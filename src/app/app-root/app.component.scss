@@ -5,9 +5,9 @@
     overflow: hidden;
 
     main {
-        overflow: scroll;
-        flex-grow: 1;
+        overflow-y: scroll;
         height: calc(100vh - 50px - 25px);
+        padding-inline: 20px;
     }
 
     footer {
@@ -17,9 +17,8 @@
         bottom: 0;
         align-items: center;
         justify-content: center;
-        color: brown;
-        background-color: peachpuff;
-        font-size: 0.8em;
+        border-top: 1px solid whitesmoke;
+        font-size: 0.7em;
         width: 100%;
     }
 }

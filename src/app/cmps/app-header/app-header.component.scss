@@ -27,6 +27,11 @@ nav {
 a:not(.logo) {
     margin-left: 20px;
     
+    &:hover img{
+        box-shadow: 1px 1px 6px 0px #00000096;
+        background-color: whitesmoke;
+        border-radius: 5px;
+    }
     &.active img {
         box-shadow: 1px 1px 6px 0px #00000096;
         background-color: #ffa50057;

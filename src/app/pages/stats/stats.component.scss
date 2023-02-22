@@ -1,0 +1,9 @@
+:host{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+article{
+    max-width: 300px;
+}
