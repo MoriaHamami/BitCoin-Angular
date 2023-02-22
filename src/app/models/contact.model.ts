@@ -2,8 +2,8 @@ import {Transaction} from "./transaction.model"
 
 export class Contact {
 
+    public _id?: string = ''
     constructor(
-        public _id: string = '',
         public name: string = '',
         public email: string = '',
         public phone: string = '',

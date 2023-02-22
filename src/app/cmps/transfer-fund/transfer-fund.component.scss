@@ -1,0 +1,42 @@
+:host {
+
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 10px;
+    margin-block: 10px;
+
+    .title{
+        padding-top: 10px;
+    }
+
+    form {
+        display: flex;
+        padding-block: 10px;
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    input {
+        border: none;
+        border-bottom: 1px solid lightgray;
+        outline: none;
+        background: none;
+        width: 50%;
+        margin-inline: 5px;
+    }
+
+    button {
+        background: none;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        font-size: 0.7rem;
+        display: flex;
+
+        &:hover {
+            background-color: whitesmoke;
+        }
+    }
+
+}

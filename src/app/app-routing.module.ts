@@ -11,29 +11,26 @@ import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent, canActivate: [AuthGuard] },
   { path: 'signup', component: SignupPageComponent },
+  { path: 'contact', component: ContactIndexComponent, canActivate: [AuthGuard] },
   {
-    path: 'contact/:id',
-    component: ContactDetailsComponent,
-    resolve: { contact: ContactResolver }, 
+    path: 'contact/edit/:id',
+    component: ContactEditComponent,
+    canActivate: [AuthGuard],
+    resolve: { contact: ContactResolver }
+  },
+  {
+    path: 'contact/edit',
+    component: ContactEditComponent,
     canActivate: [AuthGuard]
   },
   {
-    path: 'contact', component: ContactIndexComponent, canActivate: [AuthGuard], children: [
-      {
-        path: 'edit/:id',
-        component: ContactEditComponent,
-        resolve: { contact: ContactResolver },
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'edit',
-        component: ContactEditComponent,
-        canActivate: [AuthGuard]
-      },
-    ]
+    path: 'contact/:id',
+    component: ContactDetailsComponent,
+    canActivate: [AuthGuard],
+    resolve: { contact: ContactResolver }
   },
   { path: 'stats', component: StatsComponent, canActivate: [AuthGuard] },
 ];

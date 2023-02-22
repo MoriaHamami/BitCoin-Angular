@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Contact } from '../models/contact.model';
+import { Transaction } from '../models/transaction.model';
 import { User } from '../models/user.model';
 import { ContactService } from './contact.service';
 import { StorageService } from './storage.service';
@@ -71,10 +72,10 @@ export class UserService {
       }
 
       currUser.moves.unshift(transaction)
-      currUser.coins = currUser.coins - amount
+      currUser.coins -= amount
       this.storageService.save(this.STORAGE_KEY_USER, currUser)
 
-      contact.transactions.unshift(transaction)
+      contact.transactions.unshift(transaction as Transaction)
       await this.contactService.saveContact(contact)
 
       return 'Transfer complete'
@@ -102,20 +103,5 @@ export class UserService {
       return 
     }
   }
-
-    // private user = {
-  //   _id: 'u101',
-  //   name: "Ochoa Hyde",
-  //   coins: 100,
-  //   moves: []
-  // }
-
-  // private _user$ = new BehaviorSubject<User>(User);
-  // public user$ = this._user$.asObservable()
-
-
-  // public getUser(): User {
-  //   return this.user
-  // }
 
 }

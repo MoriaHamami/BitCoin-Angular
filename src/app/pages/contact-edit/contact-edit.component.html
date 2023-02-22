@@ -1,44 +1,26 @@
-<section *ngIf="contact" class="contact-edit">
-    <h2>{{contact._id ? 'Edit' : 'Add'}} contact</h2>
-    <form (ngSubmit)="onAddContact()">
-        <label for="name">Name</label>
-        <input [(ngModel)]="contact.name" type="text" name="name" id="name">
+<section class="contact-edit">
+    <div class="actions">
+        <img class="back" title="Back" (click)="onBack()" src="./assets/icons/back.png" alt="" />
+        <img *ngIf="contact" src="./assets/icons/delete.png" (click)="onRemoveContact()" class="remove-btn" />
+    </div>
+    <img *ngIf="contact" class="user-img" src="https://robohash.org/{{contact._id}}?set=set5" alt="">
+    <img *ngIf="!contact" class="user-img" src="./assets/icons/contact.png" alt="">
+    <h2>{{contact?._id ? 'Edit' : 'Add'}} contact</h2>
+    <form [formGroup]="form" (ngSubmit)="onAddContact()">
+        <label>
+            Name
+            <input formControlName="name" type="text" name="name" id="name" placeholder="Name">
+        </label>
+        <label>
+            Email
+            <input formControlName="email" type="email" name="email" id="email" placeholder="Email">
+        </label>
 
-        <label for="age">Email</label>
-        <input [(ngModel)]="contact.email" type="email" name="email" id="email">
-        
-        <label for="age">Phone</label>
-        <input [(ngModel)]="contact.phone" type="string" name="phone" id="phone">
-
-        <!-- <label for="birthDate">Birth Date</label>
-        <input [ngModel]="contact.birthDate | date:'yyyy-MM-dd'" (ngModelChange)="handleDateField($event)" type="date"
-            name="birthDate" id="birthDate"> -->
-
+        <label>
+            Phone
+            <input formControlName="phone" type="text" name="phone" id="phone" placeholder="Phone">
+        </label>
         <button>Save</button>
     </form>
-    <button (click)="onBack()">Back</button>
-    <button *ngIf="contact" (click)="onRemoveContact()" class="remove-btn">Delete</button>
 
 </section>
-
-
-
-<!-- <section class="contact-edit">
-    <fa-icon (click)="onBack()" class="icon back" [icon]="faCircleArrowLeft"></fa-icon>
-    <fa-icon (click)="onRemove()" class="icon remove" [icon]="faTrash"></fa-icon>
-    <h2 class="title">{{contact?._id ? 'Edit' : 'Add'}} Contact</h2>
-    <img *ngIf="contact?._id" src="https://robohash.org/{{contact?._id}}?set=set5" alt="">
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <label for="name">Name:
-            <input formControlName="name" id="name" placeholder="Name" />
-        </label>
-        <label for="email">Email:
-            <input formControlName="email" id="email" placeholder="Email" />
-        </label>
-        <label for="phone">Phone:
-            <input formControlName="phone" id="phone" placeholder="Phone" />
-        </label>
-
-        <button>Save</button>
-    </form>
-</section> -->

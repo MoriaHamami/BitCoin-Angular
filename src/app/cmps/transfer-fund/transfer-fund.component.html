@@ -1,4 +1,6 @@
+<div class="title">Transfer coins to {{contact.name}}:</div>
 <form (ngSubmit)="onTransferCoins()" class="transfer">
-    <input [(ngModel)]="amount" type="number" placeholder="Type fund price (BTC)" />
-    <button>Fund</button>
+    <label for="amount">Amount: </label>
+    <input [(ngModel)]="amount" name="amount" type="number" placeholder="Type fund price (BTC)" />
+    <button>Transfer</button>
 </form>

@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-.contact-edit {
+.contact-details {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -12,7 +12,7 @@
     font-size: 0.8rem;
 
     >* {
-        padding-block: 8px;
+        padding-block: 5px;
     }
 
     h2 {
@@ -38,37 +38,10 @@
     }
 
     .back,
-    .remove-btn {
+    .edit-btn {
         cursor: pointer;
         height: 20px;
         width: 20px;
-    }
-
-    label {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-bottom: 10px;
-        cursor: pointer;
-    }
-
-    input {
-        border: 1px solid lightgray;
-        border-radius: 5px;
-        padding: 3px 10px;
-        outline: none;
-    }
-
-    button {
-        background: none;
-        border: 1px solid lightgray;
-        border-radius: 5px;
-        font-size: 0.7rem;
-        display: flex;
-
-        &:hover {
-            background-color: whitesmoke;
-        }
     }
 
 }

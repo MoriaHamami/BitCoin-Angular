@@ -1,10 +1,12 @@
 <section class="contact-details">
+    <div class="actions">
+        <img class="back" title="Back" (click)="onBack()" src="./assets/icons/back.png" alt="" />
+        <img (click)="onEditContact($event)" src="./assets/icons/edit.png" class="edit-btn" />
+    </div>
+    <img class="user-img" src="https://robohash.org/{{contact._id}}?set=set5" alt="">
     <p>Name: {{contact.name}}</p>
     <p>Email: {{contact.email}}</p>
     <p>Phone: {{contact.phone}}</p>
-    <img src="https://robohash.org/{{contact._id}}?set=set5" alt="">
     <transfer-fund [contact]="contact" />
     <moves-list *ngIf="contact.transactions" title="Transactions" [transactions]="contact.transactions"/>
-    <button (click)="onEditContact($event)" class="edit-btn">Edit</button>
-    <button (click)="onBack()">Back</button>
 </section>
