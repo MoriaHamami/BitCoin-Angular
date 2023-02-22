@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "inClass-pets": {
+        "bitcoin-angular": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -17,7 +17,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/in-class-pets",
+                        "outputPath": "dist/bitcoin-angular",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": [
