@@ -2,7 +2,7 @@
 An app I wrote using Angular, in which you can transfer money to your fake contacts, CRUDL them and get information about the current Bitcoin value, the market price and more!
 [Take a look, it's on Github pages](https://moriahamami.github.io/bitcoin-angular/ "Github pages link")
 
-![Homepage image](src/assets/imgs/homepage-img.jpg "Homepage image")
+![Homepage image](src/assets/imgs/homepage-img.png "Homepage image")
 ___
 
 ### Table of Contents
