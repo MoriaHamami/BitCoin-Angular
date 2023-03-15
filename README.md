@@ -1,5 +1,5 @@
-# Mr.bitcoin
-An app I wrote using Angular, in which you can transfer money to your fake contacts, CRUDL them and get information about the current Bitcoin value, the market price and more!
+# Mr.BitCoin
+The first app I built using Angular, in merely 3 days! On this app you can transfer money to your fake contacts, CRUDL them and get information about the current Bitcoin value, the market price and more!
 [Take a look, it's on Github pages](https://moriahamami.github.io/bitcoin-angular/ "Github pages link")
 
 ![Homepage image](src/assets/imgs/homepage-img.png "Homepage image")
