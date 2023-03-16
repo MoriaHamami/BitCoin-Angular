@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "bitcoin-angular": {
+        "Mr.BitCoin-Angular": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -17,7 +17,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/bitcoin-angular",
+                        "outputPath": "dist/Mr.BitCoin-Angular",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": [
@@ -65,10 +65,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "browserTarget": "bitcoin-angular:build:production"
+                            "browserTarget": "Mr.BitCoin-Angular:build:production"
                         },
                         "development": {
-                            "browserTarget": "bitcoin-angular:build:development"
+                            "browserTarget": "Mr.BitCoin-Angular:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "bitcoin-angular:build"
+                        "browserTarget": "Mr.BitCoin-Angular:build"
                     }
                 },
                 "test": {
